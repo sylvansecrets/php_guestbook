@@ -79,7 +79,7 @@ $db['default'] = array(
 	'username' => 'fiit',
 	'password' => 'fiit',
 	'database' => 'fiitfu',
-	'dbdriver' => 'pgsql',
+	'dbdriver' => 'postgre',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
