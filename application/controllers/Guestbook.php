@@ -7,6 +7,16 @@
 		}
 
 		public function index() {
+			$data['guestlist'] = $this->guestbook_model->get_comments();
+
+			$this->load->view('pages/header.php');
+			$this->load->view('pages/guestbook.php', $data);
+			$this->load->view('pages/form.php');
+			$this->load->view('pages/footer.php');
+		}
+
+		public function data_submitted() {
+
 			$visitor_name = $this->input->post('v_name');
 			$visitor_comment = $this->input->post('v_comment');
 			$insert_data = array(
@@ -16,12 +26,8 @@
 
 			$this->guestbook_model->new_comment($insert_data);
 
-			$data['guestlist'] = $this->guestbook_model->get_comments();
-
-			$this->load->view('pages/header.php');
-			$this->load->view('pages/guestbook.php', $data);
-			$this->load->view('pages/form.php');
-			$this->load->view('pages/footer.php');
+			$this->load->helper('url');
+			redirect('/guestbook');
 		}
 
 
