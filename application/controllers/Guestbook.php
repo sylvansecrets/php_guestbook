@@ -3,13 +3,15 @@
 
 		public function __construct() {
 			parent::__construct();
+			$this->load->model('guestbook_model');
 		}
 
 		public function index() {
-			$data['guestlist'][] = array(
-				'visitor_name' => $this->input->post('v_name'),
-				'visitor_comment' => $this->input->post('v_comment')
-				);
+			// $data['guestlist'][] = array(
+			// 	'visitor_name' => $this->input->post('v_name'),
+			// 	'visitor_comment' => $this->input->post('v_comment')
+			// 	);
+			$data['guestlist'] = $this->guestbook_model->get_comments();
 
 			$this->load->view('pages/header.php');
 			$this->load->view('pages/guestbook.php', $data);
