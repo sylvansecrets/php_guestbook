@@ -1,15 +1,17 @@
 <section class="form-submission">
 
 	<?php
-
-	echo form_open('guestbook/data_submitted/'.$anti_bot, 'class="form-content"');
+	$data = array(
+		'class' => 'form-content '.md5(rand())
+		);
+	echo form_open('guestbook/data_submitted/'.$anti_bot, $data);
 
 	echo form_label('Visitor Name: ', 'v_name');
 
 	$data = array(
 		'name' => 'v_name',
 		'placeholder' => 'Please Enter Your Name',
-		'class' => 'name-box'
+		'class' => 'name-box '.md5(rand())
 		);
 
 	echo form_input($data);
@@ -20,7 +22,7 @@
 	$data = array(
 		'name' => 'v_comment',
 		'placeholder' => 'Leave a message in the guestbook!',
-		'class' => 'v-comment',
+		'class' => 'v-comment '.md5(rand()),
 		'type' => 'text'
 		);
 
@@ -33,7 +35,7 @@
 		$data = array(
 			'type' => 'submit',
 			'value' => 'Submit',
-			'class' => 'submit_button'
+			'class' => 'submit_button '.md5(rand())
 			);
 		echo form_submit($data);
 	?>
