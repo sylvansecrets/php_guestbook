@@ -1,6 +1,6 @@
 <?php
 
-echo form_open('guestbook');
+echo form_open('guestbook/data_submitted/'.$anti_bot);
 
 echo form_label('Visitor Name: ', 'v_name');
 
