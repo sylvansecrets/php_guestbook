@@ -30,8 +30,9 @@
 			}
 			$decrypt = openssl_decrypt(hex2bin($anti_bot), ENCRYPT_METHOD, ENCRYPT_KEY, 1, IV);
 			$time = get_match('/(?<=(\|\|))(.*)/', $decrypt);
-			$ip = $ip = get_match('/(.*?)(?=(\|\|))/', $decrypt);
-			if ($ip == $_SERVER['REMOTE_ADDR'] AND abs ($time - time()) < 15*60) {
+			$ip = get_match('/(.*?)(?=(\|\|))/', $decrypt);
+			$honeypot = $this->input->post('u_name') AND $this->input->post('u_comment');
+			if ($ip == $_SERVER['REMOTE_ADDR'] AND abs ($time - time()) < 15*60 AND !$honeypot) {
 				$visitor_name = $this->input->post('v_name');
 				$visitor_comment = $this->input->post('v_comment');
 				$insert_data = array(
