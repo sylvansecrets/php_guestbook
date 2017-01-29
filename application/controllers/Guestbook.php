@@ -15,6 +15,7 @@
 
 			$this->load->view('pages/header.php');
 			$this->load->view('pages/form.php', $form_data);
+			$this->load->view('pages/honeypot.php', $form_data);
 			$this->load->view('pages/guestbook.php', $data);
 			$this->load->view('pages/footer.php');
 		}
