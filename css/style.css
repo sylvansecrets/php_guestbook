@@ -26,6 +26,10 @@ html, body {
 	z-index: 10;
 }
 
+section.forms {
+	display: none;
+}
+
 main {
 	position: absolute;
 	overflow-y: auto;
@@ -41,7 +45,7 @@ main {
 .form-content {
 	margin: 0 auto;
 	display: block;
-	background-color: #fffaf4;
+	background-color: #fff6f4;
 	min-width: 200px;
 	width: 70%;
 	border-radius: 10px;
