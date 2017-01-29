@@ -6,6 +6,10 @@ class Guestbook_model extends CI_Model {
 
 		public function get_comments() {
 			$query = $this->db->get('guestbook');
-			return $query->row_array();
+			return $query;
+		}
+
+		public function new_comment($insert_data) {
+			$this->db->insert('guestbook', $insert_data);
 		}
 }
