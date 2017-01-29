@@ -3,7 +3,7 @@ Set-Up
 
 Base-URL
 --------
-Currently, the base_url() is set to `http://localhost:8000`.
+Currently, the `base_url()` is set to `http://localhost:8000`.
 
 Please change this to reflect your server at `application/config/config.php`.
 
