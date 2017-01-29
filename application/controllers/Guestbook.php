@@ -35,6 +35,8 @@
 			if ($ip == $_SERVER['REMOTE_ADDR'] AND abs ($time - time()) < 15*60 AND !$honeypot) {
 				$visitor_name = $this->input->post('v_name');
 				$visitor_comment = $this->input->post('v_comment');
+				if (!$visitor_name) $visitor_name = 'Anonymous';
+				if (!$visitor_comment) $visitor_comment = '... ...';
 				$insert_data = array(
 					'visitor' => $visitor_name,
 					'comment' => $visitor_comment
