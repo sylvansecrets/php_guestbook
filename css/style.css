@@ -1,0 +1,112 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color:#fff9f4;
+	color: #dc9535;
+}
+
+.page-header-title {
+	font-weight: 500;
+	font-size: 2em;
+	display: block;
+	line-height: 50px;
+	text-align: center;
+}
+
+.banner {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: #ffdec3;
+	opacity: 1;
+	height: 50px;
+	z-index: 10;
+}
+
+main {
+	position: absolute;
+	overflow-y: auto;
+	top: 50px;
+	left: 0;
+	right: 0;
+}
+
+.form-submission {
+	margin: 10px;
+}
+
+.form-content {
+	margin: 0 auto;
+	display: block;
+	background-color: #fffaf4;
+	min-width: 200px;
+	width: 70%;
+	border-radius: 10px;
+	border: 4px solid #ffe5c3;
+	padding: 10px;
+	color: #dc8535;
+}
+
+input, textarea {
+	display: block;
+	margin-top: 10px;
+}
+
+.v-comment {
+	width: 100%;
+	height: 75px;
+}
+
+input:focus, input:hover, textarea:hover, textarea:focus {
+	box-shadow: 0 0 18px #ffb98b;
+}
+
+.guestbook-entries {
+	overflow-y: auto;
+}
+
+article {
+	margin: 10px;
+	padding: 5px;
+	border-radius: 7px;
+	border: 2px solid #ffdbc3;
+	position: relative;
+	background-color: #fff7f4;
+}
+
+.visitor-name {
+	font-weight: 600;
+	font-size: 0.9em;
+}
+
+.comment-time {
+	font-style: italic;
+	font-weight: 50;
+	font-size: 0.7em;
+}
+
+.visitor-comment {
+	margin: 3px;
+	width: calc(100% - 30px);
+	overflow-wrap: break-word;
+	padding: 15px;
+}
+
+.para-container {
+	position: relative;
+}
+
+i.fa {
+	color: grey;
+	position: absolute;
+	right: 0;
+	bottom: 10px;
+	margin: auto;
+}
+
+i.fa:hover {
+	color: #ff5b5b;
+}
