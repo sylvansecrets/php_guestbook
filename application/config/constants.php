@@ -83,3 +83,9 @@ defined('EXIT_USER_INPUT')     OR define('EXIT_USER_INPUT', 7); // invalid user 
 defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+
+defined('ENCRYPT_KEY') OR define('ENCRYPT_KEY', 'G408AFNAV');
+defined('ENCRYPT_METHOD') OR define('ENCRYPT_METHOD', 'aes-256-ctr');
+defined('IV') OR define('IV', 0101010101010101010);
+// wait time before page is invalid in minutes
+defined('WAIT_TIME') OR define('WAIT_TIME', 15);
