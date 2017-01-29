@@ -7,13 +7,15 @@
 		}
 
 		public function index() {
+			$this->load->helper('url');
+
 			$data['guestlist'] = $this->guestbook_model->get_comments();
 
 			$form_data['anti_bot'] = bin2hex(openssl_encrypt(($_SERVER['REMOTE_ADDR']).(("||".time())), ENCRYPT_METHOD, ENCRYPT_KEY, 1, IV));
 
 			$this->load->view('pages/header.php');
-			$this->load->view('pages/guestbook.php', $data);
 			$this->load->view('pages/form.php', $form_data);
+			$this->load->view('pages/guestbook.php', $data);
 			$this->load->view('pages/footer.php');
 		}
 
