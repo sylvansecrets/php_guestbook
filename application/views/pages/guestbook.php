@@ -2,8 +2,8 @@
 <section class="guestbook-entries">
 <?php
 	foreach($guestlist->result_array() as $value) {
-		$v_name = $value['visitor'];
-		$v_comment = $value['comment'];
+		$v_name = htmlspecialchars($value['visitor'], ENT_QUOTES, 'UTF-8');
+		$v_comment = htmlspecialchars($value['comment'], ENT_QUOTES, 'UTF-8');
 		$v_time = date(DATE_RFC2822, strtotime($value['time']));
 		$comment_id = $value['id'];
 		echo "
